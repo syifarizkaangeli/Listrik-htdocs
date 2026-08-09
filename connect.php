@@ -1,12 +1,41 @@
 <?php
+
 $host = "localhost";
 $user = "root";
 $pass = "";
-$db = "listrik";
+$db   = "listrik";
 
-$koneksi = new mysqli($host,$user,$pass,$db);
 
-if($koneksi->connect_error){
-    die("koneksi gagal : " . $koneksi->connect_error);
+$koneksi = new mysqli(
+    $host,
+    $user,
+    $pass,
+    $db
+);
+
+
+/*
+|--------------------------------------------------------------------------
+| CEK KONEKSI DATABASE
+|--------------------------------------------------------------------------
+*/
+
+if ($koneksi->connect_error) {
+
+    die(
+        "Koneksi database gagal: "
+        . $koneksi->connect_error
+    );
+
 }
+
+
+/*
+|--------------------------------------------------------------------------
+| SET CHARSET
+|--------------------------------------------------------------------------
+*/
+
+$koneksi->set_charset("utf8mb4");
+
 ?>
