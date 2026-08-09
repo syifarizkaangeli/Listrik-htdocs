@@ -69,7 +69,7 @@ $data_blm = [
 $queryBelumLunas = "
     SELECT COUNT(DISTINCT email) AS total_blm
     FROM tagihan
-    WHERE status != 'Lunas'
+    WHERE pembayaran != 'Lunas'
 ";
 
 $resultBelumLunas = $koneksi->query($queryBelumLunas);
