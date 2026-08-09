@@ -39,6 +39,7 @@ $totalTagihan = $tagihan['total_tagihan'] ?? 0;
 <meta charset="UTF-8">
 <title>Beranda User</title>
 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
 <style>
 .card-hover{
     transition: 0.3s;

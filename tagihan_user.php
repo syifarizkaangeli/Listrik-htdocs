@@ -22,6 +22,7 @@ $today = date('Y-m-d');
 <meta charset="UTF-8">
 <title>Tagihan Saya</title>
 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
 <style>
 .lunas { color: white; font-weight: bold; }
 .overdue { background-color: #f8d7da !important; } /* merah untuk tagihan lebih dari sebulan */

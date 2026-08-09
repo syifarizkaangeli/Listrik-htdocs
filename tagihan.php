@@ -35,6 +35,7 @@ $konsumen = $koneksi->query("SELECT email,nama FROM konsumen");
 <meta charset="UTF-8">
 <title>Tagihan Konsumen</title>
 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
 <style>
 .lunas { color: white; font-weight: bold; }
 </style>

@@ -68,6 +68,7 @@ $result = $koneksi->query("SELECT * FROM konsumen");
 <meta charset="UTF-8">
 <title>Data Konsumen</title>
 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-light">
 

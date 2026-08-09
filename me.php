@@ -30,6 +30,7 @@ $user = $qUser->fetch_assoc();
 <meta charset="UTF-8">
 <title>Akun Saya</title>
 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body class="bg-light">

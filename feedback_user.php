@@ -39,6 +39,7 @@ if (isset($_POST['submit'])) {
 <meta charset="UTF-8">
 <title>Kritik & Saran</title>
 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
 <style>
 body { background-color: #f8f9fa; }
 </style>

@@ -34,6 +34,7 @@ if (isset($_POST['login'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Admin</title>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-light">
     <div class="container mt-5">

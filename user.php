@@ -30,6 +30,7 @@ if (isset($_POST['login'])) {
 <meta charset="UTF-8">
 <title>Login User</title>
 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-light">
 

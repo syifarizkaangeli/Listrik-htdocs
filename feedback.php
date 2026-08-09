@@ -16,6 +16,7 @@ $result = $koneksi->query("
     <meta charset="UTF-8">
     <title>Feedback Pelanggan</title>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-light">
 

@@ -1,0 +1,876 @@
+/* =========================================
+   LISTRIK - GLOBAL UI
+   ========================================= */
+
+:root {
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --primary-soft: #eff6ff;
+
+    --bg: #f5f7fb;
+    --card: #ffffff;
+
+    --text: #172033;
+    --muted: #6b7280;
+
+    --border: #e5e7eb;
+
+    --success: #16a34a;
+    --success-soft: #ecfdf5;
+
+    --danger: #dc2626;
+    --danger-soft: #fef2f2;
+
+    --warning: #d97706;
+    --warning-soft: #fff7ed;
+
+    --radius: 16px;
+
+    --shadow:
+        0 8px 25px rgba(15, 23, 42, 0.06);
+}
+
+
+/* =========================================
+   RESET
+   ========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            180deg,
+            #f8fafc 0%,
+            #f5f7fb 100%
+        );
+
+    color: var(--text);
+
+    font-family:
+        Inter,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+/* =========================================
+   NAVBAR
+   ========================================= */
+
+.navbar {
+    background:
+        linear-gradient(
+            135deg,
+            #1d4ed8,
+            #2563eb
+        ) !important;
+
+    min-height: 68px;
+
+    padding: 10px 0;
+
+    box-shadow:
+        0 4px 20px rgba(37, 99, 235, .16);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+}
+
+.navbar .container {
+    position: relative;
+}
+
+.navbar-brand {
+    font-weight: 800;
+    letter-spacing: -.3px;
+}
+
+.navbar-nav {
+    gap: 5px;
+}
+
+.navbar-nav .nav-link {
+    color: rgba(255,255,255,.78) !important;
+
+    padding: 9px 14px !important;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition:
+        background .2s ease,
+        color .2s ease,
+        transform .2s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    background: rgba(255,255,255,.12);
+
+    color: #fff !important;
+
+    transform: translateY(-1px);
+}
+
+.navbar-nav .nav-link.active {
+    background: rgba(255,255,255,.18);
+
+    color: #fff !important;
+}
+
+
+/* =========================================
+   LOGOUT
+   ========================================= */
+
+.navbar .btn-outline-light {
+    border: 1px solid rgba(255,255,255,.65);
+
+    border-radius: 10px;
+
+    font-weight: 700;
+
+    padding: 7px 13px;
+
+    transition: .2s;
+}
+
+.navbar .btn-outline-light:hover {
+    background: #fff;
+
+    color: var(--primary);
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+   ========================================= */
+
+.container {
+    max-width: 1180px;
+}
+
+main,
+.container.mt-5 {
+    animation:
+        pageIn .35s ease;
+}
+
+@keyframes pageIn {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+/* =========================================
+   HEADINGS
+   ========================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--text);
+
+    font-weight: 750;
+
+    letter-spacing: -.4px;
+}
+
+h4 {
+    font-size: 25px;
+}
+
+
+/* =========================================
+   DASHBOARD CARDS
+   ========================================= */
+
+.card {
+    border:
+        1px solid var(--border) !important;
+
+    border-radius:
+        var(--radius) !important;
+
+    background:
+        var(--card);
+
+    box-shadow:
+        var(--shadow) !important;
+
+    overflow: hidden;
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        border-color .2s ease;
+}
+
+.card:hover {
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 14px 35px rgba(15, 23, 42, .09) !important;
+
+    border-color:
+        #dbeafe !important;
+}
+
+.card-body {
+    padding: 26px;
+}
+
+.card-title {
+    margin-bottom: 12px;
+
+    color: var(--muted);
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+.card-body h1 {
+    font-size: 35px;
+
+    font-weight: 800;
+
+    margin-bottom: 5px;
+}
+
+.card-body p {
+    margin-bottom: 0;
+
+    color: var(--muted) !important;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   DASHBOARD NUMBER COLORS
+   ========================================= */
+
+.text-primary {
+    color:
+        var(--primary) !important;
+}
+
+.text-success {
+    color:
+        var(--success) !important;
+}
+
+.text-danger {
+    color:
+        var(--danger) !important;
+}
+
+
+/* =========================================
+   FORMS
+   ========================================= */
+
+.form-control,
+.form-select {
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        10px;
+
+    padding:
+        11px 13px;
+
+    min-height:
+        44px;
+
+    background:
+        #fff;
+
+    color:
+        var(--text);
+
+    transition:
+        border-color .2s,
+        box-shadow .2s;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color:
+        var(--primary);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(37, 99, 235, .12);
+
+    outline:
+        none;
+}
+
+textarea.form-control {
+    min-height:
+        110px;
+    resize:
+        vertical;
+}
+
+label {
+    color:
+        #374151;
+
+    font-size:
+        13px;
+
+    font-weight:
+        700;
+
+    margin-bottom:
+        6px;
+}
+
+
+/* =========================================
+   BUTTONS
+   ========================================= */
+
+.btn {
+    border-radius:
+        10px;
+
+    font-weight:
+        700;
+
+    border-width:
+        1px;
+
+    transition:
+        transform .15s ease,
+        box-shadow .15s ease,
+        background .15s ease;
+}
+
+.btn:hover {
+    transform:
+        translateY(-1px);
+}
+
+.btn-primary {
+    background:
+        var(--primary);
+
+    border-color:
+        var(--primary);
+
+    box-shadow:
+        0 5px 12px
+        rgba(37, 99, 235, .16);
+}
+
+.btn-primary:hover {
+    background:
+        var(--primary-dark);
+
+    border-color:
+        var(--primary-dark);
+}
+
+.btn-success {
+    background:
+        var(--success);
+
+    border-color:
+        var(--success);
+}
+
+.btn-danger {
+    background:
+        var(--danger);
+
+    border-color:
+        var(--danger);
+}
+
+.btn-secondary {
+    background:
+        #64748b;
+
+    border-color:
+        #64748b;
+}
+
+
+/* =========================================
+   TABLE
+   ========================================= */
+
+.table {
+    margin-bottom: 0;
+
+    background:
+        #fff;
+
+    border-color:
+        var(--border);
+
+    vertical-align:
+        middle;
+}
+
+.table thead th {
+    background:
+        #f8fafc !important;
+
+    color:
+        #64748b;
+
+    border-bottom:
+        1px solid var(--border);
+
+    font-size:
+        11px;
+
+    font-weight:
+        800;
+
+    text-transform:
+        uppercase;
+
+    letter-spacing:
+        .5px;
+
+    padding:
+        14px 16px;
+
+    white-space:
+        nowrap;
+}
+
+.table tbody td {
+    padding:
+        14px 16px;
+
+    color:
+        #475569;
+
+    border-color:
+        var(--border);
+
+    font-size:
+        13px;
+}
+
+.table tbody tr {
+    transition:
+        background .15s ease;
+}
+
+.table tbody tr:hover {
+    background:
+        #f8fbff;
+}
+
+.table-dark {
+    --bs-table-bg:
+        #172033 !important;
+
+    --bs-table-color:
+        #fff !important;
+}
+
+
+/* =========================================
+   TABLE WRAPPER
+   ========================================= */
+
+.table-responsive {
+    border-radius:
+        14px;
+
+    overflow-x:
+        auto;
+}
+
+
+/* =========================================
+   ALERT
+   ========================================= */
+
+.alert {
+    border:
+        none;
+
+    border-radius:
+        12px;
+
+    padding:
+        13px 16px;
+
+    font-size:
+        13px;
+
+    font-weight:
+        600;
+}
+
+.alert-success {
+    background:
+        var(--success-soft);
+
+    color:
+        #047857;
+}
+
+.alert-danger {
+    background:
+        var(--danger-soft);
+
+    color:
+        #b91c1c;
+}
+
+.alert-warning {
+    background:
+        var(--warning-soft);
+
+    color:
+        #b45309;
+}
+
+
+/* =========================================
+   FORM CARD
+   ========================================= */
+
+.card-header {
+    border:
+        0 !important;
+
+    padding:
+        15px 20px;
+
+    font-weight:
+        750;
+}
+
+.card-header.bg-primary {
+    background:
+        linear-gradient(
+            135deg,
+            #1d4ed8,
+            #2563eb
+        ) !important;
+}
+
+.card-header.bg-success {
+    background:
+        linear-gradient(
+            135deg,
+            #15803d,
+            #16a34a
+        ) !important;
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+footer {
+    position:
+        relative !important;
+
+    margin-top:
+        60px !important;
+
+    background:
+        #172033 !important;
+
+    color:
+        #cbd5e1 !important;
+
+    padding:
+        22px 15px !important;
+
+    box-shadow:
+        0 -4px 20px
+        rgba(15,23,42,.04);
+}
+
+footer small {
+    font-size:
+        12px;
+}
+
+
+/* =========================================
+   BODY BACKGROUND OVERRIDE
+   ========================================= */
+
+body.bg-light {
+    background:
+        linear-gradient(
+            180deg,
+            #f8fafc,
+            #f5f7fb
+        ) !important;
+}
+
+
+/* =========================================
+   DASHBOARD SPACING
+   ========================================= */
+
+.row.g-4 {
+    margin-top:
+        10px;
+}
+
+.row.g-4 .card {
+    height:
+        100%;
+}
+
+
+/* =========================================
+   CUSTOMER / BILLING PAGE
+   ========================================= */
+
+.d-flex.justify-content-between {
+    align-items:
+        center;
+
+    gap:
+        15px;
+}
+
+.d-flex.justify-content-between h4 {
+    margin:
+        0;
+}
+
+
+/* =========================================
+   BADGES
+   ========================================= */
+
+.badge {
+    border-radius:
+        999px;
+
+    padding:
+        6px 10px;
+
+    font-weight:
+        700;
+}
+
+
+/* =========================================
+   LOGIN
+   ========================================= */
+
+.login-container {
+    min-height:
+        100vh;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    padding:
+        20px;
+}
+
+.login-card {
+    width:
+        100%;
+
+    max-width:
+        430px;
+
+    background:
+        #fff;
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        20px;
+
+    padding:
+        30px;
+
+    box-shadow:
+        0 20px 50px
+        rgba(15,23,42,.10);
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 991px) {
+
+    .navbar {
+        position:
+            relative;
+    }
+
+    .navbar-nav {
+        padding:
+            10px 0;
+    }
+
+    .navbar-nav .nav-link {
+        padding:
+            11px 13px !important;
+    }
+
+    .navbar .position-absolute {
+        position:
+            static !important;
+
+        margin:
+            5px 0 0 !important;
+    }
+
+    .navbar .btn {
+        width:
+            100%;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .container {
+        padding-left:
+            16px;
+
+        padding-right:
+            16px;
+    }
+
+    .container.mt-5 {
+        margin-top:
+            25px !important;
+    }
+
+    h4 {
+        font-size:
+            22px;
+    }
+
+    .card-body {
+        padding:
+            20px;
+    }
+
+    .card-body h1 {
+        font-size:
+            30px;
+    }
+
+    .d-flex.justify-content-between {
+        align-items:
+            stretch;
+
+        flex-direction:
+            column;
+    }
+
+    .d-flex.justify-content-between .btn {
+        width:
+            100%;
+    }
+
+    .table {
+        min-width:
+            720px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .card-body {
+        padding:
+            18px;
+    }
+
+    .btn {
+        padding:
+            9px 12px;
+    }
+
+    .form-control {
+        font-size:
+            14px;
+    }
+
+    footer {
+        margin-top:
+            40px !important;
+    }
+
+}

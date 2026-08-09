@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Pilih Login</title>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-
+    <link rel="stylesheet" href="style.css">
     <style>
         .card-hover {
             cursor: pointer;
